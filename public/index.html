@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherArena</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <h1>AetherArena</h1>
+        <p class="subtitle">A lightweight real-time multiplayer arena built with Socket.io</p>
+      </header>
+      <main class="main">
+        <canvas id="game-canvas" width="1000" height="1000" aria-label="AetherArena game field"></canvas>
+        <aside class="sidebar" aria-label="Chat window">
+          <div class="chat-header">Arena Chat</div>
+          <div id="chat-log" class="chat-log" role="log" aria-live="polite"></div>
+          <input
+            id="chat-input"
+            type="text"
+            maxlength="200"
+            placeholder="Press Enter to chat"
+            aria-label="Chat input"
+          />
+          <div class="chat-hint">Press Enter to focus chat, Enter again to send.</div>
+        </aside>
+      </main>
+      <footer class="footer">
+        <p>Move with WASD or Arrow keys. Built for desktop and mobile browsers.</p>
+      </footer>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="client.js"></script>
+  </body>
+</html>
